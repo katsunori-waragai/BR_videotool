@@ -1,6 +1,7 @@
 from pathlib import Path
 import cv2
 import argparse
+
 def concatenate_videos(left_video_path, right_video_path, output_path):
     left_video = cv2.VideoCapture(left_video_path)
     right_video = cv2.VideoCapture(right_video_path)
@@ -39,7 +40,6 @@ if __name__ == "__main__":
     right = Path(args.rightname)
 #    outname = Path(args.outname)
 
-    # 2つの入力動画ファイルパス
     left_video_path = args.leftname
     right_video_path = args.rightname
     output_path = "concatenated_video.mp4"
